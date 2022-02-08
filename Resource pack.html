@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--<meta http-equiv="Content-Type" content="text/html;charset=utf-8">-->
+<html>
+    <head>
+        <title>How to make resource packs</title>
+        <link href="cssscripts/style.css" rel="stylesheet"> <!--The HTML file it uses style.css, DO NOT REMOVE IT FROM THE LINK!!!-->
+        <!--/////////////////////////////////-->
+        <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet"><!--Play(used at navigation bar)-->
+        <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&display=swap" rel="stylesheet"><!--Hind Madurai(Used at h1 font texture)-->
+        <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet"><!--Domine(Used at h2 font texture)-->
+        <link rel="shortcut icon" type="image/png" href="Zenith icon.png"><!--THE MOST IMPORTANT THING!!!-->
+    </head>
+    <body>
+      <script src="javascripts/new style.js"></script>
+        <button id="mainPg" onclick="getMainPg()">Home</button>
+        <button id="usePg" onclick="getusePg()">How to use</button>
+        <button id="rsp" onclick="RSP()">How to create resource packs</button>
+        <button id="abPg" onclick="abPg()">About</button>
+        <h1>The easiest way to make a Zenith resource pack is in Textured module using json scripts</h1><br>
+        <h2>The best IDE text editor is Visual Studio Code</a></h2>
+        <a href="https://code.visualstudio.com/download" target="_blank">Get VS Code</a>
+        <h1>Basic resource pack script</h1>
+       <div id="RSPJsonCode">
+         <pre>
+           <div id="numLn">
+           <c>1</c>    <span>{</span> 
+           <c>2</c>     &nbsp;&nbsp;<span id="comment">//Any line that starts with "//" is a comment and can be removed</span>
+           <c>3</c>     &nbsp;&nbsp;<span id="whiteblue">"description"</span>:<span id="orange">"Default resource pack for Zenith's textured plugin."</span>,
+           <c>4</c>     &nbsp;&nbsp;<span id="whiteblue">"sameWidthNotes"</span>:<span id="orange">"false"</span>,
+           <c>5</c>
+           <c>6</c>     &nbsp;&nbsp;<span id="whiteblue">"previewImage"</span>:<span id="orange">"preview.png"</span>,
+           <c>7</c>
+           <c>8</c>     &nbsp;&nbsp;<span id="whiteblue">"blackKey"</span>:<span id="orange">"keyBlack.png"</span>,
+           <c>9</c>     &nbsp;&nbsp;<span id="whiteblue">"blackKeyPressed"</span>:<span id="orange">"keyBlackPressed.png"</span>,
+           <c>10</c>    &nbsp;&nbsp;<span id="whiteblue">"whiteKey"</span>:<span id="orange">"keyWhite.png"</span>,
+           <c>11</c>    &nbsp;&nbsp;<span id="whiteblue">"whiteKeyPressed"</span>:<span id="orange">"keyWhitePressed.png"</span>,
+           <c>12</c>    &nbsp;&nbsp;<span id="whiteblue">"bar"</span>:<span id="orange">"bar.png"</span>,
+           <c>13</c>
+           <c>14</c>    &nbsp;&nbsp;<span id="whiteblue">"blackKeyOversize"</span>:<span id="num"> 3</span>,
+           <c>15</c>    &nbsp;&nbsp;<span id="whiteblue">"blackKeyPressedOversize"</span>:<span id="num"> 1</span>,
+           <c>16</c>
+           <c>17</c>    &nbsp;&nbsp;<span id="whiteblue">"blackKeysWhiteShade"</span>:<span id="orange">"true"</span>,
+           <c>18</c>    &nbsp;&nbsp;<span id="whiteblue">"blackKeyHeight"</span>: <span id="num">40</span>,
+           <c>19</c>    &nbsp;&nbsp;<span id="comment">//Note type maximum sizes (aspect ratios)</span>
+           <c>20</c>    &nbsp;&nbsp;<span id="comment">//Warning: using more than one note height texture is much slower</span>
+           <c>21</c>    &nbsp;&nbsp;<span id="whiteblue">"notes"</span>: [
+           <c>22</c>       {
+           <c>23</c>         &nbsp;<span id="comment">//Size is relative to width. Size = note_height / note_width</span>
+           <c>24</c>         &nbsp;<span id="whiteblue">"maxSize"</span>: <span id="num">4</span>,
+           <c>25</c>         &nbsp;<span id="comment">//alwaysStretch means that it will never tile the texture</span>
+           <c>26</c>         &nbsp;<span id="whiteblue">"alwaysStretch"</span>:<span id="orange">"true"</span>,
+           <c>27</c>         &nbsp;<span id="whiteblue">"useEndCaps"</span>:<span id="orange">"true"</span>,
+           <c>28</c>         &nbsp;<span id="whiteblue">"middleTexture"</span>:<span id="orange">"note.png"</span>,
+           <c>29</c>         &nbsp;<span id="whiteblue">"topTexture"</span>:<span id="orange">"noteEdge.png"</span>,
+           <c>30</c>         &nbsp;<span id="whiteblue">"bottomTexture"</span>:<span id="orange">"noteEdge.png"</span>,
+           <c>31</c>         &nbsp;<span id="whiteblue">"topOversize"</span>: <span id="num">0</span>,
+           <c>32</c>         &nbsp;<span id="whiteblue">"bottomOversize"</span>: <span id="num">0</span>,
+           <c>33</c>       }
+           <c>34</c>     ]
+           <c>35</c>   }
+           </div>
+         </pre>
+         <a class="btn dev arduinoproject1-download" href="json/pack.json">Download code</a>
+       </div>
+       <br>
+       <h2></h2>
+       <div id="RSPJsonCode">
+
+       </div>
+    </body>
+</html>

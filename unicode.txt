@@ -1,0 +1,5 @@
+&nbsp; for text space
+
+
+
+&nbsp;&nbsp;<span id="whiteblue"></span>:<span id="orange"></span>,

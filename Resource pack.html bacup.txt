@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--<meta http-equiv="Content-Type" content="text/html;charset=utf-8">-->
+<html>
+    <head>
+        <title>How to make resource packs</title>
+        <link href="cssscripts/style.css" rel="stylesheet"> <!--The HTML file it uses style.css, DO NOT REMOVE IT FROM THE LINK!!!-->
+        <!--/////////////////////////////////-->
+        <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet"><!--Play(used at navigation bar)-->
+        <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&display=swap" rel="stylesheet"><!--Hind Madurai(Used at h1 font texture)-->
+        <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet"><!--Domine(Used at h2 font texture)-->
+        <link rel="shortcut icon" type="image/png" href="Zenith icon.png"><!--THE MOST IMPORTANT THING!!!-->
+    </head>
+    <body>
+      <script src="javascripts/new style.js"></script>
+        <button id="mainPg" onclick="getMainPg()">Home</button>
+        <button id="usePg" onclick="getusePg()">How to use</button>
+        <button id="rsp" onclick="RSP()">How to create resource packs</button>
+        <button id="abPg" onclick="abPg()">About</button>
+        <h1>The easiest way to make a Zenith resource pack is in Textured module using json scripts</h1><br>
+        <h2>The best IDE text editor is Visual Studio Code</a></h2>
+        <a href="https://code.visualstudio.com/download" target="_blank">Get VS Code</a>
+        <h1>Basic resource pack script</h1>
+       <div id="RSPJsonCode">
+         <pre>
+            { 
+            &nbsp;&nbsp;<span id="comment">//Any line that starts with "//" is a comment and can be removed</span>
+             &nbsp;&nbsp;<span id="whiteblue">"description"</span>:<span id="orange">"Default resource pack for Zenith's textured plugin."</span>,
+             &nbsp;&nbsp;<span id="whiteblue">"sameWidthNotes"</span>:<span id="orange">"false"</span>,
+ 
+             &nbsp;&nbsp;<span id="whiteblue">"previewImage"</span>:<span id="orange">"preview.png"</span>,
+ 
+             &nbsp;&nbsp;<span id="whiteblue">"blackKey"</span>:<span id="orange">"keyBlack.png"</span>,
+             &nbsp;&nbsp;<span id="whiteblue">"blackKeyPressed"</span>:<span id="orange">"keyBlackPressed.png"</span>,
+             &nbsp;&nbsp;<span id="whiteblue">"whiteKey"</span>:<span id="orange">"keyWhite.png"</span>,
+             &nbsp;&nbsp;<span id="whiteblue">"whiteKeyPressed"</span>:<span id="orange">"keyWhitePressed.png"</span>,
+             &nbsp;&nbsp;<span id="whiteblue">"bar"</span>:<span id="orange">"bar.png"</span>,
+ 
+             &nbsp;&nbsp;<span id="whiteblue">"blackKeyOversize"</span>:<span id="num"> 3</span>,
+             &nbsp;&nbsp;<span id="whiteblue">"blackKeyPressedOversize"</span>:<span id="num"> 1</span>,
+ 
+             &nbsp;&nbsp;<span id="whiteblue">"blackKeysWhiteShade"</span>:<span id="orange">"true"</span>,
+             &nbsp;&nbsp;<span id="whiteblue">"blackKeyHeight"</span>: <span id="num">40</span>,
+             &nbsp;&nbsp;<span id="comment">//Note type maximum sizes (aspect ratios)</span>
+             &nbsp;&nbsp;<span id="comment">//Warning: using more than one note height texture is much slower</span>
+             &nbsp;&nbsp;<span id="whiteblue">"notes"</span>: [
+                 {
+                   &nbsp;<span id="comment">//Size is relative to width. Size = note_height / note_width</span>
+                   &nbsp;<span id="whiteblue">"maxSize"</span>: <span id="num">4</span>,
+                   &nbsp;<span id="comment">//alwaysStretch means that it will never tile the texture</span>
+                   &nbsp;<span id="whiteblue">"alwaysStretch"</span>:<span id="orange">"true"</span>,
+                   &nbsp;<span id="whiteblue">"useEndCaps"</span>:<span id="orange">"true"</span>,
+                   &nbsp;<span id="whiteblue">"middleTexture"</span>:<span id="orange">"note.png"</span>,
+                   &nbsp;<span id="whiteblue">"topTexture"</span>:<span id="orange">"noteEdge.png"</span>,
+                   &nbsp;<span id="whiteblue">"bottomTexture"</span>:<span id="orange">"noteEdge.png"</span>,
+                   &nbsp;<span id="whiteblue">"topOversize"</span>: <span id="num">0</span>,
+                   &nbsp;<span id="whiteblue">"bottomOversize"</span>: <span id="num">0</span>,
+                 }
+               ]
+             }
+          </pre>
+       </div>
+    </body>
+</html>
