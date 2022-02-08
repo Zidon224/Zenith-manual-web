@@ -1,0 +1,1 @@
+alert("The translations might be with a lot of mistakes because I used google translate"); //This script is only for langs section.html
