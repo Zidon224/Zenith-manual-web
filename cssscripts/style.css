@@ -1,29 +1,3 @@
-/*!Navigation bar style*/
-ul{ /*!Unordered list css property for navigation bar and others....*/
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-    background-color:rgb(8, 253, 0)
-}
-li a{ /*!The css property to the navigation bar*/
-    float: left;
-    display: block;
-    color: white;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    border-right: 1px solid grey;
-    min-width: 60px;
-    font-family: "Comfortaa";
-    font-size: 14px; /*!Do not change the value plss!!!*/
-}
-li a:hover{
-    background-color:green;
-    animation: glowanimation;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
 @keyframes glowanimation{
     50% {text-shadow: 0px 0px 10px yellowgreen}
 }
@@ -41,7 +15,9 @@ li a:hover{
     margin-left: 500px;
     margin-bottom: 50px;
     margin-right: 50px;
-    box-shadow: 5px 5px 5px rgb(206, 204, 204)
+    box-shadow: 5px 5px 5px rgb(206, 204, 204);
+    border-radius: 15px 15px;
+    padding: 10px 15px;
 }
 @keyframes slider {  /*!Animation function and a variable("slider")*/  
     from{margin-left: 100%;}
@@ -85,4 +61,166 @@ li a{
     background-color: rgb(38, 63, 63);
     width:700px;
     box-shadow: 5px 5px 5px rgb(206, 204, 204)
+}
+/*!Buttons*/
+#mainPg {
+    border-radius: 15px 15px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: chartreuse;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+}
+#mainPg:hover {
+    background-color: rgb(196, 255, 138);
+    box-shadow: 5px 5px 5px rgb(161, 161, 161);
+}
+#usePg {
+    border-radius: 15px 15px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: chartreuse; 
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+}
+#usePg:hover {
+    background-color: rgb(196, 255, 138);
+    box-shadow: 5px 5px 5px rgb(161, 161, 161);
+}
+#rsp {
+    border-radius: 15px 15px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: chartreuse; 
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+}
+#rsp:hover {
+    background-color: rgb(196, 255, 138);
+    box-shadow: 5px 5px 5px rgb(161, 161, 161);
+}
+#abPg {
+    border-radius: 15px 15px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: chartreuse; 
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+}
+#abPg:hover {
+    background-color: rgb(196, 255, 138);
+    box-shadow: 5px 5px 5px rgb(161, 161, 161);
+}
+#box4 {
+    background-color: rgb(0, 255, 0);
+    height: 770px;
+    width: 930px;
+    border-radius: 15px 15px;
+    text-align: center;
+    margin-left: 150px;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+}
+#box5 {
+    background-color: rgb(0, 255, 0);
+    border-radius: 15px 15px;
+    text-align: center;
+    margin-left: 150px;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+    height: 1320px;
+    width: 930px;
+}
+#box6 {
+    background-color: rgb(0, 255, 0);
+    border-radius: 15px 15px;
+    text-align: center;
+    margin-left: 150px;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+    height: 1400px;
+    width: 930px;
+}
+#box7 {
+    background-color: rgb(0, 255, 0);
+    border-radius: 15px 15px;
+    text-align: center;
+    margin-left: 150px;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+    height: 3450px;
+    width: 930px;
+}
+#box8 {
+    background-color: rgb(0, 255, 0);
+    border-radius: 15px 15px;
+    text-align: center;
+    margin-left: 150px;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+    height: 2740px;
+    width: 930px;
+}
+#box9 {
+    background-color: rgb(0, 255, 0);
+    border-radius: 15px 15px;
+    text-align: center;
+    margin-left: 150px;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+    height: 4200px;
+    width: 930px;
+}
+#box10 {
+    background-color: rgb(0, 255, 0);
+    border-radius: 15px 15px;
+    text-align: center;
+    margin-left: 150px;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+    height: 3300px;
+    width: 930px; 
+}
+#box11 {
+    background-color: rgb(0, 255, 0);
+    border-radius: 15px 15px;
+    text-align: center;
+    margin-left: 150px;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+    height: 4100px;
+    width: 930px;
+}
+#box12 {
+    background-color: rgb(0, 255, 0);
+    border-radius: 15px 15px;
+    text-align: center;
+    margin-left: 150px;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+    height: 2800px;
+    width: 930px;
+}
+#box13 {
+    background-color: rgb(0, 255, 0);
+    border-radius: 15px 15px;
+    text-align: center;
+    margin-left: 150px;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+    height: 2990px;
+    width: 930px;
+}
+#box14 {
+    background-color: rgb(0, 255, 0);
+    border-radius: 15px 15px;
+    text-align: center;
+    margin-left: 150px;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+    height: 1690px;
+    width: 930px;
+}
+#box15 {
+    background-color: rgb(0, 255, 0);
+    border-radius: 15px 15px;
+    text-align: center;
+    margin-left: 150px;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+    height: 2200px;
+    width: 930px; 
+}
+#box16 {
+    background-color: rgb(0, 255, 0);
+    border-radius: 15px 15px;
+    text-align: center;
+    margin-left: 150px;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+    height: 1400px;
+    width: 930px;
 }
