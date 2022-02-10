@@ -62,6 +62,12 @@ li a{
     width:700px;
     box-shadow: 5px 5px 5px rgb(206, 204, 204)
 }
+#white {
+    color: white;
+}
+#valuesnum {
+    color: rgb(105, 255, 100);
+}
 /*!Buttons*/
 #mainPg {
     border-radius: 15px 15px;
@@ -223,4 +229,34 @@ li a{
     box-shadow: 5px 5px 5px rgb(109, 109, 109);
     height: 1400px;
     width: 930px;
+}
+#atrbox {
+    background-color: gray;
+}
+#atrboxin {
+    background-color: rgb(36, 36, 36);
+    width:520px;
+}
+#previewbox {
+    background-color: darkgreen;
+    width:900px;
+    height: 1200px;
+}
+#previewbox1 {
+    background-color: darkgreen;
+    width:900px;
+    height: 650px;
+}
+#preview1 {
+    margin-left: 24px;
+}
+#prevbox2 {
+    background-color: darkgreen;
+    width:900px;
+    height: 650px;
+}
+#previewbox2 {
+    background-color: darkgreen;
+    width:900px;
+    height: 2400px;
 }
