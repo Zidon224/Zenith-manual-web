@@ -167,13 +167,97 @@
               <pre>
                 <span id="whiteblue">"whiteKeyShader"</span><span id="white">:</span>&nbsp;<span id="orange">"hybrid"</span>
               </pre>
+            </div>
+            <img src="assets/bandicam 2022-02-10 23-37-09-641.png">
           </div>
-          <img src="assets/bandicam 2022-02-10 23-37-09-641.png">
+          <br>
+          <h2>Black key offsets</h2>
+          <div id="previewbox5">
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"blackKey3setOffset"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.625</span>
+              </pre>
+            </div>
+              <div id="atrboxin">
+                <pre>
+                  <span id="whiteblue">"blackKey2setOffse"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.625</span>
+                </pre>
+            </div>
+            <h4>Is recommanded to use both attributions for better keyboard and notes re-align</h4>
+            <img src="assets/bandicam 2022-02-11 07-39-50-563.png">
+          </div>
+          <h2>Black keys width(Black Key Scale)</h2>
+          <div id="previewbox5">
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"blackKeyScale"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.481481481481481481481</span>
+              </pre>
+            </div>
+            <img src="assets/bandicam 2022-02-11 17-54-59-156.png">
+          </div>
+          <br>
+          <h2>Keyboard Height</h2>
+          <div id="previewbox5">
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"keyboardHeight"</span><span id="white">:</span>&nbsp;<span id="valuesnum">8.691358024691358024691358024691358024</span>
+              </pre>
+            </div>
+            <img src="assets/bandicam 2022-02-11 23-14-45-671.png">
+          </div>
         </div>
         <br>
-        <br>
-        <br>
-        <br>
-        <h1>More info soon...</h1>
+        <h1>Example script</h1>
+        <div id="scriptboxexp">
+          <pre>
+            <span id="white">{</span>
+              &nbsp;<span id="comment">//Any line that starts with "//" is a comment and can be removed</span>
+              &nbsp;<span id="whiteblue">"description"</span><span id="white">:</span>&nbsp;<span id="orange">"My Zenith resource pack"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"sameWidthNotes"</span><span id="white">:</span>&nbsp;<span id="orange">"false"</span><span id="white">,</span>
+
+              &nbsp;<span id="whiteblue">"previewImage"</span><span id="white">:</span>&nbsp;<span id="orange">"preview.png"</span><span id="white">,</span>
+
+              &nbsp;<span id="whiteblue">"blackKey"</span><span id="white">:</span>&nbsp;<span id="orange">"keyBlack.png"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"blackKeyPressed"</span><span id="white">:</span>&nbsp;<span id="orange">"keyBlackPressed.png"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"whiteKey"</span><span id="white">:</span>&nbsp;<span id="orange">"whiteKey.png"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"whiteKeyPressed"</span><span id="white">:</span>&nbsp;<span id="orange">"whiteKeyPressed.png"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"bar"</span><span id="white">:</span>&nbsp;<span id="orange">"bar.png"</span><span id="white">,</span>
+
+              &nbsp;<span id="whiteblue">"barHeight"</span><span id="white">:</span>&nbsp;<span id="valuesnum">20.24175824178824178</span><span id="white">,</span>
+
+              &nbsp;<span id="whiteblue">"noteShader"</span><span id="white">:</span>&nbsp;<span id="orange">"hybrid"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"blackKeyShader"</span><span id="white">:</span>&nbsp;<span id="orange">"inverse"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"whiteKeyShader"</span><span id="white">:</span>&nbsp;<span id="orange">"inverse"</span><span id="white">,</span>
+
+              &nbsp;<span id="whiteblue">"blackKeyOversize"</span><span id="white">:</span>&nbsp;<span id="valuesnum">3</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"blackKeyPressedOversize"</span><span id="white">:</span>&nbsp;<span id="valuesnum">1</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"blackKey3setOffset"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.625</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"blackKey2setOffset"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.625</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"blackKeyScale"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.481481481481481481481</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"keyboardHeight"</span><span id="white">:</span>&nbsp;<span id="valuesnum">8.691358024691358024691358024691358024</span><span id="white">,</span>
+
+              &nbsp;<span id="whiteblue">"blackKeysWhiteShade"</span><span id="white">:</span>&nbsp;<span id="orange">"true"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"blackKeyHeight"</span><span id="white">:</span>&nbsp;<span id="valuesnum">40</span><span id="white">,</span>
+              &nbsp;<span id="comment">//Note type maximum sizes (aspect ratios)</span>
+              &nbsp;<span id="comment">//Warning: using more than one note height texture is much slower</span>
+              &nbsp;<span id="whiteblue">"notes"</span><span id="white">: &nbsp;[</span>
+              &nbsp;&nbsp;&nbsp;<span id="white">{</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="comment">//Size is relative to width. Size = note_height / note_width</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"maxSize"</span><span id="white">:</span>&nbsp;<span id="valuesnum">4</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="comment">//alwaysStretch means that it will never tile the texture</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"alwaysStretch"</span><span id="white">:</span>&nbsp;<span id="orange">"true"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"useEndCaps"</span><span id="white">:</span>&nbsp;<span id="orange">"true"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"middleTexture"</span><span id="white">:</span>&nbsp;<span id="orange">"note.png"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"topTexture"</span><span id="white">:</span>&nbsp;<span id="orange">"noteEdge.png"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"bottomTexture"</span><span id="white">:</span>&nbsp;<span id="orange">"noteEdge.png"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"topOversize"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"bottomOversize"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"darkenBlackNotes"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.65</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"highlightHitNotes"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.5</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="white">}</span>
+              &nbsp;<span id="white">]</span>
+            <span id="white">}</span>
+          </pre>
+        </div>
     </body>
 </html>
