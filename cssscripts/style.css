@@ -235,16 +235,16 @@ li a{
 }
 #atrboxin {
     background-color: rgb(36, 36, 36);
-    width:520px;
+    width:920px;
 }
 #previewbox {
     background-color: darkgreen;
-    width:900px;
+    width:950px;
     height: 1200px;
 }
 #previewbox1 {
     background-color: darkgreen;
-    width:900px;
+    width:950px;
     height: 650px;
 }
 #preview1 {
@@ -252,19 +252,36 @@ li a{
 }
 #prevbox2 {
     background-color: darkgreen;
-    width:900px;
+    width:950px;
     height: 650px;
 }
 #previewbox2 {
     background-color: darkgreen;
-    width:900px;
+    width:950px;
     height: 2400px;
 }
 #previewbox5 {
     background-color: darkgreen;
-    width:900px;
+    width:950px;
     height: 680px;
 }
 #scriptboxexp {
     background-color: rgb(49, 49, 49);
+    width: 1050px;
+}
+span {
+    font-size: 25px;
+}
+#atrboxout {
+    background-color: rgb(56, 56, 56);
+    width: 740px;
+}
+#box540 {
+    background-color: rgb(34, 190, 34);
+    width:1000px;
+}
+#bluebox {
+    background-color: rgb(23, 131, 255);
+    height:100px;
+    width:200px;
 }
