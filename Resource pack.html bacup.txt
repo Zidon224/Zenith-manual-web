@@ -16,48 +16,681 @@
         <button id="usePg" onclick="getusePg()">How to use</button>
         <button id="rsp" onclick="RSP()">How to create resource packs</button>
         <button id="abPg" onclick="abPg()">About</button>
+        <p>More info soon</p>
         <h1>The easiest way to make a Zenith resource pack is in Textured module using json scripts</h1><br>
         <h2>The best IDE text editor is Visual Studio Code</a></h2>
         <a href="https://code.visualstudio.com/download" target="_blank">Get VS Code</a>
-        <h1>Basic resource pack script</h1>
-       <div id="RSPJsonCode">
-         <pre>
-            { 
-            &nbsp;&nbsp;<span id="comment">//Any line that starts with "//" is a comment and can be removed</span>
-             &nbsp;&nbsp;<span id="whiteblue">"description"</span>:<span id="orange">"Default resource pack for Zenith's textured plugin."</span>,
-             &nbsp;&nbsp;<span id="whiteblue">"sameWidthNotes"</span>:<span id="orange">"false"</span>,
- 
-             &nbsp;&nbsp;<span id="whiteblue">"previewImage"</span>:<span id="orange">"preview.png"</span>,
- 
-             &nbsp;&nbsp;<span id="whiteblue">"blackKey"</span>:<span id="orange">"keyBlack.png"</span>,
-             &nbsp;&nbsp;<span id="whiteblue">"blackKeyPressed"</span>:<span id="orange">"keyBlackPressed.png"</span>,
-             &nbsp;&nbsp;<span id="whiteblue">"whiteKey"</span>:<span id="orange">"keyWhite.png"</span>,
-             &nbsp;&nbsp;<span id="whiteblue">"whiteKeyPressed"</span>:<span id="orange">"keyWhitePressed.png"</span>,
-             &nbsp;&nbsp;<span id="whiteblue">"bar"</span>:<span id="orange">"bar.png"</span>,
- 
-             &nbsp;&nbsp;<span id="whiteblue">"blackKeyOversize"</span>:<span id="num"> 3</span>,
-             &nbsp;&nbsp;<span id="whiteblue">"blackKeyPressedOversize"</span>:<span id="num"> 1</span>,
- 
-             &nbsp;&nbsp;<span id="whiteblue">"blackKeysWhiteShade"</span>:<span id="orange">"true"</span>,
-             &nbsp;&nbsp;<span id="whiteblue">"blackKeyHeight"</span>: <span id="num">40</span>,
-             &nbsp;&nbsp;<span id="comment">//Note type maximum sizes (aspect ratios)</span>
-             &nbsp;&nbsp;<span id="comment">//Warning: using more than one note height texture is much slower</span>
-             &nbsp;&nbsp;<span id="whiteblue">"notes"</span>: [
-                 {
-                   &nbsp;<span id="comment">//Size is relative to width. Size = note_height / note_width</span>
-                   &nbsp;<span id="whiteblue">"maxSize"</span>: <span id="num">4</span>,
-                   &nbsp;<span id="comment">//alwaysStretch means that it will never tile the texture</span>
-                   &nbsp;<span id="whiteblue">"alwaysStretch"</span>:<span id="orange">"true"</span>,
-                   &nbsp;<span id="whiteblue">"useEndCaps"</span>:<span id="orange">"true"</span>,
-                   &nbsp;<span id="whiteblue">"middleTexture"</span>:<span id="orange">"note.png"</span>,
-                   &nbsp;<span id="whiteblue">"topTexture"</span>:<span id="orange">"noteEdge.png"</span>,
-                   &nbsp;<span id="whiteblue">"bottomTexture"</span>:<span id="orange">"noteEdge.png"</span>,
-                   &nbsp;<span id="whiteblue">"topOversize"</span>: <span id="num">0</span>,
-                   &nbsp;<span id="whiteblue">"bottomOversize"</span>: <span id="num">0</span>,
-                 }
-               ]
-             }
+        <br>
+        <h2>Attributions for each element</h3>
+        <div id="atrbox">
+          <h3>Showing description/info about the resource pack</h3>
+          <div id="atrboxin">
+            <pre>
+              <span id="whiteblue">"description"</span><span id="white">:</span>&nbsp;<span id="orange">"Text to be desplayed in the description"</span>
+            </pre>
+          </div>
+          <br>
+          <h3>Showing image preview. Any format of image is accepted(bmp, png, jpg)</h3>
+          <div id="atrboxin">
+            <pre>
+              <span id="whiteblue">"previewImage"</span><span id="white">:</span>&nbsp;<span id="orange">"img.png"</span>
+            </pre>
+          </div>
+          <br>
+          <h3>Texture loader attributions</h3>
+          <br>
+          <h4>Black key (Unpressed)</h4>
+          <div id="atrboxin">
+            <pre>
+              <span id="whiteblue">"blackKey"</span><span id="white">:</span>&nbsp;<span id="orange">"KeyBlack.png"</span>
+            </pre>
+          </div>
+          <br>
+          <h4>Black key (Pressed)</h4>
+          <div id="atrboxin">
+            <pre>
+              <span id="whiteblue">"blackKeyPressed"</span><span id="white">:</span>&nbsp;<span id="orange">"KeyBlackPressed.png"</span>
+            </pre>
+          </div>
+          <br>
+          <h4>Key White (Unpressed)</h4>
+          <div id="atrboxin">
+            <pre>
+              <span id="whiteblue">"whiteKey"</span><span id="white">:</span>&nbsp;<span id="orange">"WhiteKey.png"</span>
+            </pre>
+          </div>
+          <br>
+          <h4>Key white (Pressed)</h4>
+          <div id="atrboxin">
+            <pre>
+              <span id="whiteblue">"whiteKeyPressed"</span><span id="white">:</span>&nbsp;<span id="orange">"WhiteKeyPressed.png"</span>
+            </pre>
+          </div>
+          <br>
+          <h4>Bar or divider top</h4>
+          <div id="atrboxin">
+            <pre>
+              <span id="whiteblue">"bar"</span><span id="white">:</span>&nbsp;<span id="orange">"bar.png"</span>
+            </pre>
+          </div>
+          <h4>Notes texture loader</h4>
+          <div id="atrboxin">
+            <pre>
+              <span id="whiteblue">"middleTexture"</span><span id="white">:</span>&nbsp;<span id="orange">"note.png"</span>
+            </pre>
+          </div>
+          <h4>Note edges texrure loader</h4>
+          <div id="atrboxin">
+            <pre>
+              <span id="whiteblue">"topTexture"</span><span id="white">:</span>&nbsp;<span id="orange">"noteEdge.png"</span>
+            </pre>
+          </div>
+          <div id="atrboxin">
+            <pre>
+              <span id="whiteblue">"bottomTexture"</span><span id="white">:</span>&nbsp;<span id="orange">"noteEdge.png"</span>
+            </pre>
+          </div>
+          <h3>Other customizations</h3>
+          <br>
+          <h4>Same Width Notes</h4>
+          <h4>This attribution has 2 values: "true"(Same width notes is enabeld) or "false"(Same width notes is disabled)</h4>
+          <h4>Here is an preview about same width notes</h4>
+          <br>
+          <div id="previewbox">
+            <h4>When same width notes is "true" (Enabled) the notes and the keyboard align looks like in this image:</h4>
+            <img src="assets/48.png" id="preview1">
+            <br>
+            <h4>When Same Width notes is "false" (Disabled) the notes and keyboard align looks like this:</h4>
+            <img src="assets/49.png" id="preview1">
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"sameWidthNotes"</span><span id="white">:</span>&nbsp;<span id="orange">"true"</span>
+              </pre>
+            </div>
+          </div>
+          <br>
+          <div id="previewbox1">
+            <h4>Bar height attribution</h4>
+            <div id="atrboxin">
+             <pre>
+               <span id="whiteblue">"barHeight"</span><span id="white">:</span>&nbsp;<span id="valuesnum">20.24175824178824178</span>
+             </pre>
+           </div>
+           <img src="assets/bandicam 2022-02-10 22-58-16-223.png">
+          </div>
+          <br>
+          <h4>Darker black keys notes attribute</h4>
+          <div id="prevbox2">
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"darkenBlackNotes"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.65</span>
+              </pre>
+            </div>
+            <img src="assets/bandicam 2022-02-10 23-09-01-211.png">
+          </div>
+          <div id="prevbox2">
+            <h4>Highlight notes when are falling onto the keyboard</h4>
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"highlightHitNotes"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.5</span>
+              </pre>
+            </div>
+            <img src="assets/bandicam 2022-02-10 23-15-04-382.png">
+          </div>
+          <br>
+          <h2>Notes and keyboard shaders</h2>
+          <h3>These attributes has 3 values: normal, hybrid, inverse</h3>
+          <br>
+          <h3>At notes seection</h3>
+          <div id="previewbox">
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"noteShader"</span><span id="white">:</span>&nbsp;<span id="orange">"hybrid"</span>
+              </pre>
+            </div>
+            <img src="assets/bandicam 2022-02-10 23-22-41-133.png">
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"noteShader"</span><span id="white">:</span>&nbsp;<span id="orange">"inverse"</span>
+              </pre>
+            </div>
+            <img src="assets/bandicam 2022-02-10 23-22-41-133.png">
+          </div>
+          <br>
+          <h3>At keyboard</h3>
+          <div id="previewbox2">
+            <h4>Black keys</h4>
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"blackKeyShader"</span><span id="white">:</span>&nbsp;<span id="orange">"inverse"</span>
+              </pre>
+            </div>
+            <img src="assets/bandicam 2022-02-10 23-31-29-078.png">
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"blackKeyShader"</span><span id="white">:</span>&nbsp;<span id="orange">"hybrid"</span>
+              </pre>
+            </div>
+            <img src="assets/bandicam 2022-02-10 23-31-29-078.png">
+            <br>
+            <h4>White keys</h4>
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"whiteKeyShader"</span><span id="white">:</span>&nbsp;<span id="orange">"inverse"</span>
+              </pre>
+            </div>
+            <img src="assets/bandicam 2022-02-10 23-37-09-641.png">
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"whiteKeyShader"</span><span id="white">:</span>&nbsp;<span id="orange">"hybrid"</span>
+              </pre>
+            </div>
+            <img src="assets/bandicam 2022-02-10 23-37-09-641.png">
+          </div>
+          <br>
+          <h2>Black key offsets</h2>
+          <div id="previewbox5">
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"blackKey3setOffset"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.625</span>
+              </pre>
+            </div>
+              <div id="atrboxin">
+                <pre>
+                  <span id="whiteblue">"blackKey2setOffse"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.625</span>
+                </pre>
+            </div>
+            <h4>Is recommanded to use both attributions for better keyboard and notes re-align</h4>
+            <img src="assets/bandicam 2022-02-11 07-39-50-563.png">
+          </div>
+          <h2>Black keys width(Black Key Scale)</h2>
+          <div id="previewbox5">
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"blackKeyScale"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.481481481481481481481</span>
+              </pre>
+            </div>
+            <img src="assets/bandicam 2022-02-11 17-54-59-156.png">
+          </div>
+          <br>
+          <h2>Keyboard Height</h2>
+          <div id="previewbox5">
+            <div id="atrboxin">
+              <pre>
+                <span id="whiteblue">"keyboardHeight"</span><span id="white">:</span>&nbsp;<span id="valuesnum">8.691358024691358024691358024691358024</span>
+              </pre>
+            </div>
+            <img src="assets/bandicam 2022-02-11 23-14-45-671.png">
+          </div>
+        </div>
+        <br>
+        <h1>Example script</h1>
+        <div id="scriptboxexp">
+          <pre>
+            <span id="white">{</span>
+              &nbsp;<span id="comment">//Any line that starts with "//" is a comment and can be removed</span>
+              &nbsp;<span id="whiteblue">"description"</span><span id="white">:</span>&nbsp;<span id="orange">"My Zenith resource pack"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"sameWidthNotes"</span><span id="white">:</span>&nbsp;<span id="orange">"false"</span><span id="white">,</span>
+
+              &nbsp;<span id="whiteblue">"previewImage"</span><span id="white">:</span>&nbsp;<span id="orange">"preview.png"</span><span id="white">,</span>
+
+              &nbsp;<span id="whiteblue">"blackKey"</span><span id="white">:</span>&nbsp;<span id="orange">"keyBlack.png"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"blackKeyPressed"</span><span id="white">:</span>&nbsp;<span id="orange">"keyBlackPressed.png"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"whiteKey"</span><span id="white">:</span>&nbsp;<span id="orange">"whiteKey.png"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"whiteKeyPressed"</span><span id="white">:</span>&nbsp;<span id="orange">"whiteKeyPressed.png"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"bar"</span><span id="white">:</span>&nbsp;<span id="orange">"bar.png"</span><span id="white">,</span>
+
+              &nbsp;<span id="whiteblue">"barHeight"</span><span id="white">:</span>&nbsp;<span id="valuesnum">20.24175824178824178</span><span id="white">,</span>
+
+              &nbsp;<span id="whiteblue">"noteShader"</span><span id="white">:</span>&nbsp;<span id="orange">"hybrid"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"blackKeyShader"</span><span id="white">:</span>&nbsp;<span id="orange">"inverse"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"whiteKeyShader"</span><span id="white">:</span>&nbsp;<span id="orange">"inverse"</span><span id="white">,</span>
+
+              &nbsp;<span id="whiteblue">"blackKeyOversize"</span><span id="white">:</span>&nbsp;<span id="valuesnum">3</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"blackKeyPressedOversize"</span><span id="white">:</span>&nbsp;<span id="valuesnum">1</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"blackKey3setOffset"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.625</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"blackKey2setOffset"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.625</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"blackKeyScale"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.481481481481481481481</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"keyboardHeight"</span><span id="white">:</span>&nbsp;<span id="valuesnum">8.691358024691358024691358024691358024</span><span id="white">,</span>
+
+              &nbsp;<span id="whiteblue">"blackKeysWhiteShade"</span><span id="white">:</span>&nbsp;<span id="orange">"true"</span><span id="white">,</span>
+              &nbsp;<span id="whiteblue">"blackKeyHeight"</span><span id="white">:</span>&nbsp;<span id="valuesnum">40</span><span id="white">,</span>
+              &nbsp;<span id="comment">//Note type maximum sizes (aspect ratios)</span>
+              &nbsp;<span id="comment">//Warning: using more than one note height texture is much slower</span>
+              &nbsp;<span id="whiteblue">"notes"</span><span id="white">: &nbsp;[</span>
+              &nbsp;&nbsp;&nbsp;<span id="white">{</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="comment">//Size is relative to width. Size = note_height / note_width</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"maxSize"</span><span id="white">:</span>&nbsp;<span id="valuesnum">4</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="comment">//alwaysStretch means that it will never tile the texture</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"alwaysStretch"</span><span id="white">:</span>&nbsp;<span id="orange">"true"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"useEndCaps"</span><span id="white">:</span>&nbsp;<span id="orange">"true"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"middleTexture"</span><span id="white">:</span>&nbsp;<span id="orange">"note.png"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"topTexture"</span><span id="white">:</span>&nbsp;<span id="orange">"noteEdge.png"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"bottomTexture"</span><span id="white">:</span>&nbsp;<span id="orange">"noteEdge.png"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"topOversize"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"bottomOversize"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"darkenBlackNotes"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.65</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"highlightHitNotes"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.5</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="white">}</span>
+              &nbsp;<span id="white">]</span>
+            <span id="white">}</span>
           </pre>
-       </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <h1><u>Switches</u></h1>
+        <br>
+        <h2>Another feature that Zenith textured module has is to associate functions with switches of the type Drop down list.</h2>
+        <img src="assets/bandicam 2022-02-14 23-16-34-748.png">
+        <h2>This is much convenient and easy to control keys textures and other cutsomizations.</h2>
+        <br>
+        <h3>To include swicth tab in your resource pack this is the property for switches: (Down below)</h3>
+        <img src="assets/bandicam 2022-02-14 23-14-43-301.png">
+        <div id="atrboxout">
+          <pre>
+            <span id="whiteblue">"switches"</span><span id="white">:&nbsp;[]</span>
+          </pre>
+        </div>
+        <br>
+        <h3>This switches must be lenght with a custom attribution to work.</h3>
+        <div id="box540">
+          <h3>Same width notes example switch:</h3>
+        <div id="atrboxout">
+          <pre>
+            <span id="white">{</span>
+              &nbsp;&nbsp;<span id="whiteblue">"name"</span><span id="white">:</span>&nbsp;<span id="orange">"Same width notes"</span><span id="white">,</span>
+              &nbsp;&nbsp;<span id="whiteblue">"values"</span><span id="white">:&nbsp;[</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Yes"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"No"</span>
+              &nbsp;&nbsp;<span id="white">]</span>
+            <span id="white">}</span>
+          </pre>
+        </div>
+        <h3>Functions:</h3>
+        <div id="atrboxout">
+          <pre>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"sameWidthNotes"</span><span id="white">:&nbsp;{</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Same width notes"</span><span id="white">,</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Yes"</span><span id="white">:</span>&nbsp;<span id="orange">"true"</span><span id="white">,</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"No"</span><span id="white">:</span>&nbsp;<span id="orange">"false"</span>
+            <span id="white">},</span>
+          </pre>
+        </div>
+        </div>
+        <br>
+        <br>
+        <div id="box540">
+          <div id="bluebox">
+            <h3>Texture shaders switch:</h3>
+          </div>
+          <h3>Black keys shaders</h3>
+        <div id="atrboxout">
+          <pre>
+            <span id="white">{</span>
+              &nbsp;&nbsp;<span id="whiteblue">"name"</span><span id="white">:</span>&nbsp;<span id="orange">"Black keys Shaders"</span><span id="white">,</span>
+              &nbsp;&nbsp;<span id="whiteblue">"values"</span><span id="white">:&nbsp;[</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Normal"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Hybrid"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Inverse"</span>
+              &nbsp;&nbsp;<span id="white">]</span>
+            <span id="white">}</span>
+          </pre>
+        </div>
+        <h3>Functions:</h3>
+        <div id="atrboxout">
+          <pre>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"blackKeyShader"</span><span id="white">:&nbsp;{</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Black keys Shaders"</span><span id="white">,</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Normal"</span><span id="white">:</span>&nbsp;<span id="orange">"normal"</span><span id="white">,</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Hybrid"</span><span id="white">:</span>&nbsp;<span id="orange">"hybrid"</span><span id="white">,</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Inverse"</span><span id="white">:</span>&nbsp;<span id="orange">"inverse"</span>
+            <span id="white">},</span>
+          </pre>
+        </div>
+        <br>
+        <h3>White keys shaders</h3>
+        <div id="atrboxout">
+          <pre>
+            <span id="white">{</span>
+              &nbsp;&nbsp;<span id="whiteblue">"name"</span><span id="white">:</span>&nbsp;<span id="orange">"White keys Shaders"</span><span id="white">,</span>
+              &nbsp;&nbsp;<span id="whiteblue">"values"</span><span id="white">:&nbsp;[</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Normal"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Hybrid"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Inverse"</span>
+              &nbsp;&nbsp;<span id="white">]</span>
+            <span id="white">}</span>
+          </pre>
+        </div>
+        <h3>Functions:</h3>
+        <div id="atrboxout">
+          <pre>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"whiteKeyShader"</span><span id="white">:&nbsp;{</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"White keys Shaders"</span><span id="white">,</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Normal"</span><span id="white">:</span>&nbsp;<span id="orange">"normal"</span><span id="white">,</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Hybrid"</span><span id="white">:</span>&nbsp;<span id="orange">"hybrid"</span><span id="white">,</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Inverse"</span><span id="white">:</span>&nbsp;<span id="orange">"inverse"</span>
+            <span id="white">},</span>
+          </pre>
+        </div>
+        <br>
+        <h3>Note shaders</h3>
+        <div id="atrboxout">
+          <pre>
+            <span id="white">{</span>
+              &nbsp;&nbsp;<span id="whiteblue">"name"</span><span id="white">:</span>&nbsp;<span id="orange">"Note Shaders"</span><span id="white">,</span>
+              &nbsp;&nbsp;<span id="whiteblue">"values"</span><span id="white">:&nbsp;[</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Normal"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Hybrid"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Inverse"</span>
+              &nbsp;&nbsp;<span id="white">]</span>
+            <span id="white">}</span>
+          </pre>
+        </div>
+        <h3>Functions:</h3>
+        <div id="atrboxout">
+          <pre>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"noteShader"</span><span id="white">:&nbsp;{</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Note Shaders"</span><span id="white">,</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Normal"</span><span id="white">:</span>&nbsp;<span id="orange">"normal"</span><span id="white">,</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Hybrid"</span><span id="white">:</span>&nbsp;<span id="orange">"hybrid"</span><span id="white">,</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Inverse"</span><span id="white">:</span>&nbsp;<span id="orange">"inverse"</span>
+            <span id="white">},</span>
+          </pre>
+        </div>
+        </div>
+        <br>
+        <div id="bluebox">
+          <h3>Highlight hiting notes switch</h3>
+        </div>
+        <div id="box540">
+          <div id="atrboxout">
+            <pre>
+              <span id="white">{</span>
+                &nbsp;&nbsp;<span id="whiteblue">"name"</span><span id="white">:</span>&nbsp;<span id="orange">"Highlight Hit Notes"</span><span id="white">,</span>
+                &nbsp;&nbsp;<span id="whiteblue">"values"</span><span id="white">:&nbsp;[</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Disabled"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"10 %"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"20 %"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"30 %"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"40 %"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"50 %"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"60 %"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"70 %"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"80 %"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"90 %"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"100 %"</span>
+                &nbsp;&nbsp;<span id="white">]</span>
+              <span id="white">}</span>
+            </pre>
+          </div>
+          <h3>Functions:</h3>
+          <div id="atrboxout">
+            <pre>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"highlightHitNotes"</span><span id="white">:&nbsp;{</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Highlight Hit Notes"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Disabled"</span><span id="white">:</span>&nbsp;<span id="valuesnum">"0"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"10 %"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.1</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"20 %"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.2</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"30 %"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.3</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"40 %"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.4</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"50 %"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.5</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"60 %"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.6</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"70 %"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.7</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"80 %"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.8</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"90 %"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.9</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"100 %"</span><span id="white">:</span>&nbsp;<span id="valuesnum">1</span>
+              <span id="white">}</span>
+            </pre>
+          </div>
+        </div>
+        <br>
+        <div id="bluebox">
+          <h3>Bar Height switch</h3>
+        </div>
+        <div id="box540">
+          <h3>Switch structure</h3>
+          <div id="atrboxout">
+            <pre>
+                &nbsp;&nbsp;<span id="whiteblue">"name"</span><span id="white">:</span>&nbsp;<span id="orange">"Bar height"</span><span id="white">,</span>
+                &nbsp;&nbsp;<span id="whiteblue">"values"</span><span id="white">:&nbsp;[</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Thin"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Thick"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Normal"</span>
+                &nbsp;&nbsp;<span id="white">]</span>
+              <span id="white">}</span>
+            </pre>
+          </div>
+          <h3>Functions:</h3>
+          <div id="atrboxout">
+            <pre>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"barHeight"</span><span id="white">:&nbsp;{</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Bar height"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Thin"</span><span id="white">:</span>&nbsp;<span id="valuesnum">5</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Thick"</span><span id="white">:</span>&nbsp;<span id="valuesnum">10</span></span><span id="white">,</span>
+                <span id="white">}</span>
+            </pre>
+          </div>
+        </div>
+        <br>
+        <div id="bluebox">
+          <h3>Draken Black keys notes</h3>
+        </div>
+        <div id="box540">
+          <div id="atrboxout">
+            <pre>
+              <span id="white">{</span>
+                &nbsp;&nbsp;<span id="whiteblue">"name"</span><span id="white">:</span>&nbsp;<span id="orange">"Darker black keys notes"</span><span id="white">,</span>
+                &nbsp;&nbsp;<span id="whiteblue">"values"</span><span id="white">:&nbsp;[</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Disabled"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"0.75"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"0.95"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"0.9"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"0.85"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"0.8"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"0.7"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"0.65"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"0.6"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"0.55"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"0.5"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"0.4"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"0.3"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"0.2"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"0.1"</span><span id="white">,</span>
+                &nbsp;&nbsp;<span id="white">]</span>
+              <span id="white">}</span>
+            </pre>
+          </div>
+          <h3>Functions:</h3>
+          <div id="atrboxout">
+            <pre>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"darkenBlackNotes"</span><span id="white">:&nbsp;{</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Darker black keys notes"</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"0.75"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.75</span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"0.95"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.95</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"0.9"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.9</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"0.85"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.85</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"0.8"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.8</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"0.7"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.7</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"0.65"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.65</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"0.5"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.5</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"0.4"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.4</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"0.3"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.3"</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"0.2"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.2</span></span><span id="white">,</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"0.1"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.1</span>
+              &nbsp;&nbsp;<span id="white">}</span>
+            </pre>
+          </div>
+        </div>
+        <br>
+        <div id="box540">
+          <div id="bluebox">
+            <h3>Black keys offsets switch</h3>
+          </div>
+          <div id="atrboxout">
+            <pre>
+              <span id="white">{</span>
+                &nbsp;&nbsp;<span id="whiteblue">"name"</span><span id="white">:</span>&nbsp;<span id="orange">"Black keys offsets"</span><span id="white">,</span>
+                &nbsp;&nbsp;<span id="whiteblue">"values"</span><span id="white">:&nbsp;[</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Default"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Original"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"UMP"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"UMP Old"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"PFA"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Midi trail 1"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Midi trail 2"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Middle"</span>
+                &nbsp;&nbsp;<span id="white">]</span>
+              <span id="white">}</span>
+            </div>
+            <h3>Functions</h3>
+            <div id="atrboxout">
+              <pre>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"blackKey2setOffset"</span><span id="white">:&nbsp;{</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Black keys offsets"</span><span id="white">,</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Default"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.25</span><span id="white">,</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Original"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.3</span></span><span id="white">,</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"UMP"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.4</span></span><span id="white">,</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"UMP Old"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.625</span></span><span id="white">,</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"PFA"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.430555555555555555555</span></span><span id="white">,</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Midi trail 1"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.3</span></span><span id="white">,</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Midi trail 2"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.5</span></span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Middle"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0</span></span>
+                  &nbsp;&nbsp;<span id="white">},</span>
+
+                  <span id="comment">//3 offset property</span>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"blackKey3setOffset"</span><span id="white">:&nbsp;{</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Black keys offsets"</span><span id="white">,</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Default"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.25</span><span id="white">,</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Original"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.30</span></span><span id="white">,</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"UMP"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.4</span></span><span id="white">,</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"UMP Old"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.625</span></span><span id="white">,</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"PFA"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.430555555555555555555</span></span><span id="white">,</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Midi trail 1"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.3</span></span><span id="white">,</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Midi trail 2"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.66666666666666666666</span></span><span id="white">,</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Middle"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0</span></span>
+                    &nbsp;&nbsp;<span id="white">}</span>
+              </pre>
+            </div>
+        </div>
+        <br>
+        <div id="box540">
+          <div id="bluebox">
+            <h3>Black keys width</h3>
+          </div>
+          <div id="atrboxout">
+            <pre>
+              <span id="white">{</span>
+                &nbsp;&nbsp;<span id="whiteblue">"name"</span><span id="white">:</span>&nbsp;<span id="orange">"Black keys width"</span><span id="white">,</span>
+                &nbsp;&nbsp;<span id="whiteblue">"values"</span><span id="white">:&nbsp;[</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"PFA "</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"UMP"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Midi trail 1"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"Midi trail 2"</span>
+              <span id="white">}</span>
+            </pre>
+          </div>
+          <h3>Functions:</h3>
+          <div id="atrboxout">
+            <pre>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"blackKeyScale"</span><span id="white">:&nbsp;{</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Black keys width"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"PFA"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.65</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"UMP"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.615</span></span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Midi trail 1"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.571428571428571428</span></span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"Midi trail 2"</span><span id="white">:</span>&nbsp;<span id="valuesnum">0.481481481481481481481</span></span>
+                &nbsp;&nbsp;<span id="white">}</span>
+            </pre>
+          </div>
+        </div>
+        <br>
+        <h2>Textures switch chooser</h2>
+        <div id="blue">
+          <h3>Keyboard texture chooser</h3>
+        </div>
+        <div id="box540">
+          <div id="atrboxout">
+            <pre>
+              <span id="white">{</span>
+                &nbsp;&nbsp;<span id="whiteblue">"name"</span><span id="white">:</span>&nbsp;<span id="orange">"Keyboard version"</span><span id="white">,</span>
+                &nbsp;&nbsp;<span id="whiteblue">"values"</span><span id="white">:&nbsp;[</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"V1 "</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="orange">"V2"</span>
+              <span id="white">}</span>
+            </pre>
+          </div>
+          <br>
+          <h3>For changing the entire keyboard version this are all of the properties that you have to write in your code.(Black keys pressed unpressed , White keys pressed unpressed , bar is optional, add it only if you have a keyboard with a divider top bar.)</h3>
+          <h3>It is also possible to create file paths to that image</h3>
+          <br>
+          <div id="atrboxout">
+            <pre>
+                <span id="comment">//Black key section</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"blackKey"</span><span id="white">:&nbsp;{</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Keyboard version"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"V1"</span><span id="white">:</span>&nbsp;<span id="orange">"path/to/blackKeyV1.png"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"V2"</span><span id="white">:</span>&nbsp;<span id="orange">"path/to/blackKeyV2.png"</span>
+                <span id="white">},</span>
+
+                <span id="comment">//Key white section</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"whiteKey"</span><span id="white">:&nbsp;{</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Keyboard version"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"V1"</span><span id="white">:</span>&nbsp;<span id="orange">"path/to/whiteKeyV1.png"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"V2"</span><span id="white">:</span>&nbsp;<span id="orange">"path/to/whiteKeyV2.png"</span>
+                <span id="white">},</span>
+
+                <span id="comment">//Black key pressed section</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"blackKeyPressed"</span><span id="white">:&nbsp;{</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Keyboard version"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"V1"</span><span id="white">:</span>&nbsp;<span id="orange">"path/to/blackKeyPressedV1.png"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"V2"</span><span id="white">:</span>&nbsp;<span id="orange">"path/to/blackKeyPressedV2.png"</span>
+                <span id="white">},</span>
+
+                <span id="comment">//White key pressed section</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"whiteKeyPressed"</span><span id="white">:&nbsp;{</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Keyboard version"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"V1"</span><span id="white">:</span>&nbsp;<span id="orange">"path/to/whiteKeyPressedV1.png"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"V2"</span><span id="white">:</span>&nbsp;<span id="orange">"path/to/whiteKeyPressedV2.png"</span>
+                <span id="white">},</span>
+
+                <span id="comment">//Note section (Middle texture)</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"middleTexture"</span><span id="white">:&nbsp;[</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"whiteKeyPressed"</span><span id="white">:&nbsp;{</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Keyboard version"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"V1"</span><span id="white">:</span>&nbsp;<span id="orange">"path/to/noteV1.png"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"V2"</span><span id="white">:</span>&nbsp;<span id="orange">"path/to/noteV2.png"</span>
+                <span id="white">},</span>
+                  
+                <span id="comment">//Bottom note edges</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"bottomTexture"</span><span id="white">:&nbsp;[</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"whiteKeyPressed"</span><span id="white">:&nbsp;{</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Keyboard version"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"V1"</span><span id="white">:</span>&nbsp;<span id="orange">"path/to/noteEdgeV1.png"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"V2"</span><span id="white">:</span>&nbsp;<span id="orange">"path/to/noteEdgeV2.png"</span>
+                <span id="white">},</span>
+
+                <span id="comment">//Top note edges</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"topTexture"</span><span id="white">:&nbsp;[</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"whiteKeyPressed"</span><span id="white">:&nbsp;{</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"_switch"</span><span id="white">:</span>&nbsp;<span id="orange">"Keyboard version"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"V1"</span><span id="white">:</span>&nbsp;<span id="orange">"path/to/noteEdgeV1.png"</span><span id="white">,</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"V2"</span><span id="white">:</span>&nbsp;<span id="orange">"path/to/noteEdgeV2.png"</span>
+                <span id="white">},</span>
+            </pre>
+          </div>
+        </div>
+        <br>
+        <h2>Is also possible to write some text under or above the switches for some info, sugestions or other things.</h2>
+        <img src="assets/bandicam 2022-02-16 17-17-15-406.png">
+        <div id="atrboxout">
+          <pre>
+             <span id="white">{</span>
+             &nbsp;&nbsp;&nbsp;&nbsp;<span id="whiteblue">"text"</span><span id="white">:</span>&nbsp;<span id="orange">"Some text thing"</span>
+             <span id="white">}</span>
+          </pre>
+        </div>
+        <br>
+        <h1>A full script example will be added soon...</h1>
     </body>
 </html>
