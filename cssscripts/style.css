@@ -274,7 +274,7 @@ span {
 }
 #atrboxout {
     background-color: rgb(56, 56, 56);
-    width: 740px;
+    width: 940px;
 }
 #box540 {
     background-color: rgb(34, 190, 34);
@@ -284,4 +284,8 @@ span {
     background-color: rgb(23, 131, 255);
     height:100px;
     width:200px;
+}
+#atrboxout1 {
+    background-color: rgb(56, 56, 56);
+    width: 1850px;
 }
