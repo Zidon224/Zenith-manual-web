@@ -21,7 +21,7 @@
 }
 @keyframes slider {  /*!Animation function and a variable("slider")*/  
     from{margin-left: 100%;}
-    to{margin-left: 40%;}
+    to{margin-left: 60%;}
 }
 body{
     background-color:rgb(188, 255, 192);
